@@ -1811,6 +1811,7 @@ app.post('*', onem2mParser, (request, response) => {
                     results = null;
 
                     check_xm2m_headers(request, (code) => {
+                        console.log("Chan Test code::", code);
                         if (code === '200') {
                             if (request.body !== "") {
                                 check_resource_supported(request, response, (code) => {
